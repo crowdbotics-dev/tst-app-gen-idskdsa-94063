@@ -26,6 +26,24 @@ function api_v1_hello_partial_update(payload) {
 function api_v1_hello_destroy(payload) {
   return tstappgenidskdsaAPI.delete(`/api/v1/hello/${payload.id}/`)
 }
+function api_v1_kite_list(payload) {
+  return tstappgenidskdsaAPI.get(`/api/v1/kite/`)
+}
+function api_v1_kite_create(payload) {
+  return tstappgenidskdsaAPI.post(`/api/v1/kite/`, payload.data)
+}
+function api_v1_kite_retrieve(payload) {
+  return tstappgenidskdsaAPI.get(`/api/v1/kite/${payload.id}/`)
+}
+function api_v1_kite_update(payload) {
+  return tstappgenidskdsaAPI.put(`/api/v1/kite/${payload.id}/`, payload.data)
+}
+function api_v1_kite_partial_update(payload) {
+  return tstappgenidskdsaAPI.patch(`/api/v1/kite/${payload.id}/`, payload.data)
+}
+function api_v1_kite_destroy(payload) {
+  return tstappgenidskdsaAPI.delete(`/api/v1/kite/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return tstappgenidskdsaAPI.post(`/api/v1/login/`, payload.data)
 }
@@ -79,6 +97,12 @@ export const apiService = {
   api_v1_hello_update,
   api_v1_hello_partial_update,
   api_v1_hello_destroy,
+  api_v1_kite_list,
+  api_v1_kite_create,
+  api_v1_kite_retrieve,
+  api_v1_kite_update,
+  api_v1_kite_partial_update,
+  api_v1_kite_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
